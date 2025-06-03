@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GD Global List | by Gaidrs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>GD Global Levels List</h1>
+        <div id="auth-section">
+            <input type="text" id="username" placeholder="Никнейм">
+            <input type="password" id="password" placeholder="Пароль">
+            <button id="login-btn">Войти</button>
+            <button id="logout-btn" style="display:none;">Выйти</button>
+        </div>
+    </header>
+
+    <nav>
+        <button class="nav-btn active" data-section="levels">Уровни</button>
+        <button class="nav-btn" data-section="forum">Форум</button>
+        <button class="nav-btn" data-section="moderation">Модерация</button>
+    </nav>
+
+    <main>
+        <!-- Секция уровней -->
+        <section id="levels-section" class="active-section">
+            <h2>Глобальный список уровней</h2>
+            <div class="search-bar">
+                <input type="text" id="search-level" placeholder="Поиск уровней...">
+                <button id="search-btn">Найти</button>
+            </div>
+            <div id="levels-list"></div>
+        </section>
+
+        <!-- Секция форума -->
+        <section id="forum-section">
+            <h2>Форум GD Global List</h2>
+            <div id="forum-topics"></div>
+            <div id="forum-controls">
+                <button id="new-topic-btn">Новая тема</button>
+            </div>
+        </section>
+
+        <!-- Секция модерации -->
+        <section id="moderation-section">
+            <h2>Панель модератора</h2>
+            <div id="moderator-controls">
+                <h3>Добавить уровень</h3>
+                <input type="text" id="level-name" placeholder="Название уровня">
+                <input type="text" id="level-creator" placeholder="Создатель">
+                <input type="text" id="level-id" placeholder="ID уровня">
+                <select id="level-difficulty">
+                    <option value="easy">Легкий</option>
+                    <option value="normal">Нормальный</option>
+                    <option value="hard">Сложный</option>
+                    <option value="insane">Безумный</option>
+                    <option value="demon">Демон</option>
+                </select>
+                <button id="add-level-btn">Добавить уровень</button>
+                
+                <h3>Управление модераторами</h3>
+                <input type="text" id="new-moderator" placeholder="Никнейм модератора">
+                <button id="add-moderator-btn">Добавить модератора</button>
+                <button id="remove-moderator-btn">Удалить модератора</button>
+                <div id="moderators-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>GD Global List © 2023 | Владелец: Gaidrs</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+      </html>
